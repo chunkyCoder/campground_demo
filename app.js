@@ -17,7 +17,8 @@ var authRoutes = require("./routes/auth");
 
 
 // mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true});
-mongoose.connect("mongodb://ed_yelpcamp:yelpcamp512@ds015899.mlab.com:15899/yelpcamp", {useMongoClient: true});
+mongoose.connect(process.env.databaseURL, {useMongoClient: true});
+
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
