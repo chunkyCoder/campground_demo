@@ -13,3 +13,12 @@
 .delete-form {
     display: inline;
 }
+
+.jumbologin {
+    text-align: center;
+    margin-left: 12%;
+}
+
+.jumbologin h1 {
+    font-family: sans-serif;
+}
