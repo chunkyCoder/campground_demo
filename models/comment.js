@@ -3,12 +3,16 @@ var mongoose = require("mongoose");
 var commentSchema = mongoose.Schema({
     text: String,
     author: {
-        id: {
+            id: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User"
-        },
-        username: String
-    }
+                },
+            username: String,
+            },
+    dateCreated: {
+            type: Date,
+            default: Date.now
+            }
 });
 
 

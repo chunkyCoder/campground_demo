@@ -34,3 +34,10 @@
 .jumbologin h1 {
     font-family: sans-serif;
 }
+
+.delete, .editCampground {
+    text-decoration: underline;
+    font-style: italic;
+    color: blue;
+    background: none;
+}
