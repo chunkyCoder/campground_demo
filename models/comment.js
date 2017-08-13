@@ -9,10 +9,7 @@ var commentSchema = mongoose.Schema({
                 },
             username: String,
             },
-    dateCreated: {
-            type: Date,
-            default: Date.now
-            }
+    date : { type : Date, required: true, default: Date.now }
 });
 
 

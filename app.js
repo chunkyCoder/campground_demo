@@ -25,8 +25,6 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
-
-
 //seedDB();  //seed db
 
 // PASSPORT CONFIGURATION
@@ -51,11 +49,6 @@ app.use(function(req, res, next) {
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundsRoutes);
 app.use(authRoutes);
-
-
-
-
-
 
 
 

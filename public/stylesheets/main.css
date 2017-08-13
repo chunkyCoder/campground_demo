@@ -35,9 +35,13 @@
     font-family: sans-serif;
 }
 
-.delete, .editCampground {
+.delete, .edit {
     text-decoration: underline;
     font-style: italic;
     color: blue;
     background: none;
+}
+
+.commentdate {
+    font-style: italic;
 }
