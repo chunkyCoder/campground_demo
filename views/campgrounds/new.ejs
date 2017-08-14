@@ -1,9 +1,11 @@
 <% include ../partials/header %>
-<div class="newcamp">
-<div class="container">
+
+
+
+<div class="container newcamp">
     <div class="row">
         <h1 style="text-align: center;">Create A New Campground</h1>
-        <div style="width: 30%; margin: 25px auto;">
+        <div style="width: 40%; margin: 25px auto;">
             <form class="" action="/campgrounds" method="POST">
                 <div class="form-group">
                     <input class="form-control" type="text" name="name" placeholder="Campground Name">
@@ -83,33 +85,33 @@
                 </div>
                 <h4>Amenities <span><h6 style="display: inline; font-style: italic"> (check all that apply)</h6></span></h4>
                 <label class="checkbox-inline col-md-3">
-                  <input type="checkbox" id="inlineCheckbox1" name="bathrooms" value="option1"> Bathrooms
+                  <input type="checkbox" id="inlineCheckbox1" name="amenities" value="Bathrooms"> Bathrooms
                 </label>
                 <label class="checkbox-inline col-md-3">
-                  <input type="checkbox" id="inlineCheckbox2" name="showers" value="option2"> Showers
+                  <input type="checkbox" id="inlineCheckbox2" name="amenities" value="Showers"> Showers
                 </label>
                 <label class="checkbox-inline col-md-3">
-                  <input type="checkbox" id="inlineCheckbox3" name="wifi" value="option3"> WiFi
-                </label>
-                <br>
-                <label class="checkbox-inline col-md-3">
-                  <input type="checkbox" id="inlineCheckbox1" name="store" value="option1"> Store
-                </label>
-                <label class="checkbox-inline col-md-3">
-                  <input type="checkbox" id="inlineCheckbox2" name="utilities" value="option2"> Utilities
-                </label>
-                <label class="checkbox-inline col-md-3">
-                  <input type="checkbox" id="inlineCheckbox3" name="pool" value="option3"> Pool
+                  <input type="checkbox" id="inlineCheckbox3" name="amenities" value="WiFi"> WiFi
                 </label>
                 <br>
                 <label class="checkbox-inline col-md-3">
-                  <input type="checkbox" id="inlineCheckbox1" name="laundry" value="option1"> Laundry
+                  <input type="checkbox" id="inlineCheckbox1" name="amenities" value="Store"> Store
                 </label>
                 <label class="checkbox-inline col-md-3">
-                  <input type="checkbox" id="inlineCheckbox2" name="pets" value="option2"> Pets
+                  <input type="checkbox" id="inlineCheckbox2" name="amenities" value="Utilities"> Utilities
                 </label>
                 <label class="checkbox-inline col-md-3">
-                  <input type="checkbox" id="inlineCheckbox3" name="all-year" value="option3"> All Year
+                  <input type="checkbox" id="inlineCheckbox3" name="amenities" value="Pool"> Pool
+                </label>
+                <br>
+                <label class="checkbox-inline col-md-3">
+                  <input type="checkbox" id="inlineCheckbox1" name="amenities" value="Laundry"> Laundry
+                </label>
+                <label class="checkbox-inline col-md-3">
+                  <input type="checkbox" id="inlineCheckbox2" name="amenities" value="Pets"> Pets
+                </label>
+                <label class="checkbox-inline col-md-3">
+                  <input type="checkbox" id="inlineCheckbox3" name="amenities" value="All Year"> All Year
                 </label>
                 <br>
                 <p></p>
@@ -121,6 +123,6 @@
         </div>
     </div>
 </div>
-</div>
+
 
 <% include ../partials/footer %>
