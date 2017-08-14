@@ -45,3 +45,15 @@
 .commentdate {
     font-style: italic;
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.newcamp {
+    background-image: url(https://farm8.staticflickr.com/7301/16360364188_863a4c83b1.jpg);
+    background-position: center;
+    background-size: cover;
+}
