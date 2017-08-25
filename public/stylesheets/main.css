@@ -60,3 +60,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .addressList {
     list-style-type: none;
 }
+
+#map {
+        height: 400px;
+        width: 100%;
+        margin-top: 1rem;
+        border: 2px solid black;
+        border-radius: 15px;
+       }

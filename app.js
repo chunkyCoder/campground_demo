@@ -9,7 +9,12 @@ var express       = require("express"),
     Comment       = require("./models/comment"),
     User          = require("./models/user"),
     flash         = require("connect-flash"),
+    
     seedDB        = require("./seeds");
+    
+var googleMapsClient = require('@google/maps').createClient({
+  key: 'AIzaSyD7Wy2pXghW0GM9-3O2Fzk7grLnwaQxzRI'
+});
     
 var commentRoutes = require("./routes/comments");
 var campgroundsRoutes = require("./routes/campgrounds");

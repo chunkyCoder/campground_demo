@@ -6,7 +6,7 @@
                 <p class="lead">Yelp Camp</p>
                 <div class="list-group">
                     <li class="list-group-item">Address:
-                    <li class="addressList"><h6 class="addressDisplay"><%=campground.street%>, <%=campground.state%><br>
+                    <li class="addressList"><h6 class="addressDisplay"><%=campground.city%>, <%=campground.state%><br>
                     <%=campground.zip%>
                     </h6></li>
                     </li>
@@ -15,7 +15,8 @@
                         <li class="amenitiesDisplay"><%=campground.amenities[i]%></li>
                         <% } %>
                       </li>
-                    <li class="list-group-item">Info 3 (Map)</li>
+                    <li class="list-group-item">Location</li>
+                    <div id="map"></div>
                 </div>
             </div>
             <div class="col-md-9">

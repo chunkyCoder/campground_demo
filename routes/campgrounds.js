@@ -23,7 +23,7 @@ router.get("/", function(req, res){
 // CREATE Route - adds campground to DB:
 router.post("/", middleware.isLoggedIn, function(req, res) {
     var name = req.body.name;
-    var street = req.body.street;
+    var city = req.body.city;
     var state = req.body.state;
     var zip = req.body.zip;
     var price = req.body.price;
@@ -34,7 +34,7 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
         id: req.user._id,
         username: req.user.username
     };
-    var newCampground = {name: name, street: street, state: state, zip: zip, price: price, image: image, description: desc, amenities: amenities, author: author};
+    var newCampground = {name: name, city: city, state: state, zip: zip, price: price, image: image, description: desc, amenities: amenities, author: author};
     // Create new campsite and save to DB
     Campground.create(newCampground, function(err, newlyCreated) {
         if(err) {
