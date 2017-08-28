@@ -9,7 +9,7 @@ var express       = require("express"),
     Comment       = require("./models/comment"),
     User          = require("./models/user"),
     flash         = require("connect-flash"),
-    
+    axios         = require("axios"),
     seedDB        = require("./seeds");
     
 var googleMapsClient = require('@google/maps').createClient({
