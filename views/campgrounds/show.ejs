@@ -3,19 +3,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <p class="lead">Yelp Camp</p>
+                <h4 class="lead sidebarTitle">Yelp Camp</h4>
+                
                 <div class="list-group">
-                    <li class="list-group-item">Address:
-                    <li class="addressList"><h6 class="addressDisplay"><%=campground.city%>, <%=campground.state%><br>
-                    <%=campground.zip%>
+                    <li class="list-group-item text-uppercase sidebarItemTitle">Location:
+                    <li class="addressList"><h6 class="addressDisplay">City: <%=campground.city%>, <%=campground.state%><br>
+                    Zip: <%=campground.zip%>
                     </h6></li>
                     </li>
-                    <li class="list-group-item">Amenities:
+                    <li class="list-group-item text-uppercase sidebarItemTitle">Amenities:
                         <% for(var i=0; i<campground.amenities.length; i++){ %>
                         <li class="amenitiesDisplay"><%=campground.amenities[i]%></li>
                         <% } %>
                       </li>
-                    <li class="list-group-item">Location</li>
+                    <li class="list-group-item text-uppercase sidebarItemTitle">Map</li>
                     <div id="map"></div>
                     <script>
                       function initMap() {
@@ -30,13 +31,10 @@
                       function geocodeAddress(geocoder, resultsMap) {
                         var zip = <%= campground.zip %>;
                         var formattedZip = '' + zip;
-                        console.log(zip);
-                        console.log(formattedZip);
                         geocoder.geocode({
                           componentRestrictions: {
                             postalCode: formattedZip
                           }}, function(results, status) {
-                        console.log(results);
                           if (status === 'OK') {
                             resultsMap.setCenter(results[0].geometry.location);
                             var marker = new google.maps.Marker({
@@ -59,7 +57,7 @@
                     <img class="img-responsive" src="<%= campground.image %>">
                     <div class="caption-full">
                         <h4 class="pull-right">$<%= campground.price %>/night</h4>
-                        <h4><a><%= campground.name %></a></h4>
+                        <h4 class="campgroundName"><%= campground.name %></h4>
                         <p><em>Submitted by <%= campground.author.username %></em></p>
                         <p><%= campground.description %></p>
                         <% if(currentUser && campground.author.id.equals(currentUser._id)) { %>
