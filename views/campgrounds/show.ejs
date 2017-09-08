@@ -15,7 +15,31 @@
                         <% for(var i=0; i<campground.amenities.length; i++){ %>
                         <li class="amenitiesDisplay"><%=campground.amenities[i]%></li>
                         <% } %>
-                      </li>
+                    </li>
+                    <li class="list-group-item text-uppercase sidebarItemTitle">Current Weather:
+                        <li class="amenitiesDisplay">
+                        <div id="weather" ></div>
+                        <p><span id="temp"></span></p>
+                        <p><span id="description"></span></p>
+                        <script>
+                            var weather = new XMLHttpRequest();
+                            var zip = <%= campground.zip %>;
+                            var formattedZip = '' + zip;
+                            
+                            weather.open("GET", "https://api.openweathermap.org/data/2.5/weather?zip=<%=campground.zip%>&units=imperial&APPID=7ef18fec12cd49b8b747c7aac1b122ee", false);
+                            weather.send(null);
+                            
+                            var r = JSON.parse(weather.response);
+                            var dis = "Skies: " + r.weather[0].main + "<br />";
+                            var temp = "Temperature: " + Math.round(r.main.temp) + "<sup>o</sup> F <br />";
+
+                            document.getElementById("temp").innerHTML = temp;
+                            document.getElementById("description").innerHTML = dis;
+                            console.log(weather.response);
+                            
+                        </script>
+                        </li>
+                    </li>  
                     <li class="list-group-item text-uppercase sidebarItemTitle">Map</li>
                     <div id="map"></div>
                     <script>
@@ -47,8 +71,6 @@
                         });
                       }
                     </script>
-                    
-                    
                 </div>
             </div>
             <div class="col-md-9">

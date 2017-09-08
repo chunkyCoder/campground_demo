@@ -10,6 +10,7 @@ var express       = require("express"),
     User          = require("./models/user"),
     flash         = require("connect-flash"),
     axios         = require("axios"),
+    request       = require("request"),
     seedDB        = require("./seeds");
     
 var googleMapsClient = require('@google/maps').createClient({
@@ -26,6 +27,7 @@ mongoose.connect(url, {useMongoClient: true});
 
 
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json())
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
