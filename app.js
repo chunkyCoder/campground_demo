@@ -16,7 +16,7 @@ var express       = require("express"),
 var googleMapsClient = require('@google/maps').createClient({
   key: 'AIzaSyD7Wy2pXghW0GM9-3O2Fzk7grLnwaQxzRI'
 });
-    
+     
 var commentRoutes = require("./routes/comments");
 var campgroundsRoutes = require("./routes/campgrounds");
 var authRoutes = require("./routes/auth");
