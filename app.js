@@ -17,6 +17,7 @@ var googleMapsClient = require('@google/maps').createClient({
   key: 'AIzaSyD7Wy2pXghW0GM9-3O2Fzk7grLnwaQxzRI'
 });
      
+var aboutRoutes = require("./routes/about");
 var commentRoutes = require("./routes/comments");
 var campgroundsRoutes = require("./routes/campgrounds");
 var authRoutes = require("./routes/auth");
@@ -56,6 +57,7 @@ app.use(function(req, res, next) {
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundsRoutes);
 app.use(authRoutes);
+app.use(aboutRoutes);
 
 
 

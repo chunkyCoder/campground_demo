@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
 .thumbnail img {
     width: 100%;
 }
@@ -106,6 +108,27 @@ input[type="number"]::-webkit-inner-spin-button {
     font-family: 'Baloo Tammudu', cursive;
     font-size: 2.5rem;
     color: #056329;
+}
+
+#about {
+    margin-left: 20px;
+}
+
+.skills {
+    text-align: left;
+    background-color: #eee;
+    width: 400px;
+    margin-left: 100px;
+}
+
+.fa {
+    margin-right: 5px;
+}
+
+.aboutHeader {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 5rem;
 }
 
 
